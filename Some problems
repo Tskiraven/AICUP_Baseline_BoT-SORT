@@ -1,4 +1,98 @@
-windows-11 
+OS: windows-11 
+CPU: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz   1.80 GHz
+RAM: 12.0 GB 
+GPU: NVIDIA GeForce MX130
+Driver Version: 552.12 
+CUDA Version: 12.4 
 
 pycocotools can't install without Microsoft C++ 
+
+so i try to install pycocotools-windows, and it works.
+
+It seemed initially feasible, but when running FastReID, an error occurs in the last epoch:
+File ".\fast_reid\fastreid\evaluation\reid_evaluation.py", line 133, in _compile_dependencies
+from .rank_cylib.rank_cy import evaluate_cy
+ModuleNotFoundError: No module named 'fast_reid.fastreid.evaluation.rank_cylib.rank_cy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+File ".\fast_reid\fastreid\engine\train_loop.py", line 151, in train
+self.after_epoch()
+File ".\fast_reid\fastreid\engine\train_loop.py", line 185, in after_epoch
+h.after_epoch()
+File ".\fast_reid\fastreid\engine\hooks.py", line 377, in after_epoch
+self._do_eval()
+File ".\fast_reid\fastreid\engine\hooks.py", line 351, in _do_eval
+results = self._func()
+File ".\fast_reid\fastreid\engine\defaults.py", line 305, in test_and_save_results
+self._last_eval_results = self.test(self.cfg, self.model)
+File ".\fast_reid\fastreid\engine\defaults.py", line 434, in test
+data_loader, evaluator = cls.build_evaluator(cfg, dataset_name)
+File ".\fast_reid\fastreid\engine\defaults.py", line 417, in build_evaluator
+return data_loader, ReidEvaluator(cfg, num_query, output_dir)
+File ".\fast_reid\fastreid\evaluation\reid_evaluation.py", line 35, in init
+self._compile_dependencies()
+File ".\fast_reid\fastreid\evaluation\reid_evaluation.py", line 138, in compile_dependencies
+compile_helper()
+File ".\fast_reid\fastreid\evaluation\rank_cylib_init.py", line 15, in compile_helper
+ret = subprocess.run(["make", "-C", path])
+File "C:\Users\adm\anaconda3\envs\botsort\lib\subprocess.py", line 488, in run
+with Popen(*popenargs, **kwargs) as process:
+File "C:\Users\adm\anaconda3\envs\botsort\lib\subprocess.py", line 800, in init
+restore_signals, start_new_session)
+File "C:\Users\adm\anaconda3\envs\botsort\lib\subprocess.py", line 1207, in _execute_child
+startupinfo)
+FileNotFoundError: [WinError 2] 系統找不到指定的檔案。
+Traceback (most recent call last):
+File ".\fast_reid\fastreid\evaluation\reid_evaluation.py", line 133, in _compile_dependencies
+from .rank_cylib.rank_cy import evaluate_cy
+ModuleNotFoundError: No module named 'fast_reid.fastreid.evaluation.rank_cylib.rank_cy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+File "fast_reid/tools/train_net.py", line 60, in
+args=(args,),
+File ".\fast_reid\fastreid\engine\launch.py", line 71, in launch
+main_func(*args)
+File "fast_reid/tools/train_net.py", line 47, in main
+return trainer.train()
+File ".\fast_reid\fastreid\engine\defaults.py", line 350, in train
+super().train(self.start_epoch, self.max_epoch, self.iters_per_epoch)
+File ".\fast_reid\fastreid\engine\train_loop.py", line 151, in train
+self.after_epoch()
+File ".\fast_reid\fastreid\engine\train_loop.py", line 185, in after_epoch
+h.after_epoch()
+File ".\fast_reid\fastreid\engine\hooks.py", line 377, in after_epoch
+self._do_eval()
+File ".\fast_reid\fastreid\engine\hooks.py", line 351, in _do_eval
+results = self._func()
+File ".\fast_reid\fastreid\engine\defaults.py", line 305, in test_and_save_results
+self._last_eval_results = self.test(self.cfg, self.model)
+File ".\fast_reid\fastreid\engine\defaults.py", line 434, in test
+data_loader, evaluator = cls.build_evaluator(cfg, dataset_name)
+File ".\fast_reid\fastreid\engine\defaults.py", line 417, in build_evaluator
+return data_loader, ReidEvaluator(cfg, num_query, output_dir)
+File ".\fast_reid\fastreid\evaluation\reid_evaluation.py", line 35, in init
+self._compile_dependencies()
+File ".\fast_reid\fastreid\evaluation\reid_evaluation.py", line 138, in compile_dependencies
+compile_helper()
+File ".\fast_reid\fastreid\evaluation\rank_cylib_init.py", line 15, in compile_helper
+ret = subprocess.run(["make", "-C", path])
+File "C:\Users\adm\anaconda3\envs\botsort\lib\subprocess.py", line 488, in run
+with Popen(*popenargs, **kwargs) as process:
+File "C:\Users\adm\anaconda3\envs\botsort\lib\subprocess.py", line 800, in init
+restore_signals, start_new_session)
+File "C:\Users\adm\anaconda3\envs\botsort\lib\subprocess.py", line 1207, in _execute_child
+startupinfo)
+FileNotFoundError: [WinError 2] 系統找不到指定的檔案。
+
+#### Therefore, I have given up. ######
+
+
+
+
+
+
 
