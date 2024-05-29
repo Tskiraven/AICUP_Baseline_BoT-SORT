@@ -23,7 +23,7 @@ SOLVER:
   BIAS_LR_FACTOR: 1.
 
   IMS_PER_BATCH: 16                   
-  MAX_EPOCH: 5
+  MAX_EPOCH: 3
   STEPS: [30, 50]
   WARMUP_ITERS: 2000
 
@@ -34,3 +34,6 @@ TEST:
   IMS_PER_BATCH: 16                  
 
 OUTPUT_DIR: logs/AICUP_115/bagtricks_R50-ibn
+
+
+##  windows loss installation Step6, Step7 ##
