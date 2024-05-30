@@ -13,7 +13,11 @@ It seemed initially feasible, but when running FastReID, an error occurs in the 
 
 final i try to pip install pycocotools, suddenly it can works
 
-but i don't have more time to try it could not success on the final epoch
+but i don't have more time to try it could not success on the final epoch.
+
+beacause i can't install faiss-gpu so i install faiss-cpu,
+
+doesn't have any problem?
 
 
 
