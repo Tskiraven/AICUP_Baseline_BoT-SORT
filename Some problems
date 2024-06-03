@@ -5,8 +5,6 @@ GPU: NVIDIA GeForce MX130
 Driver Version: 552.12 
 CUDA Version: 12.4 
 
-#####　　pycocotools can't install without Microsoft C++　　#### 
-
 so i try to install pycocotools-windows, and it works.
 
 It seemed initially feasible, but when running FastReID, an error occurs in the last epoch:
