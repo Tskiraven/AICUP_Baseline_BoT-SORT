@@ -19,14 +19,14 @@ The code is tested using torch 1.13.1+cu117 and torchvision=0.14.1+cu117
 pip install numpy
 ```
 
-**Step 4.** Install pytorch=1.13.1+cu117
+**Step 4.** Install [pytorch=1.13.1+cu117](https://pytorch.org/get-started/previous-versions/)
 ```shell
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
 ```
 
 **Step 5.** Install 'requirements.txt'
 ```shell
-<cd> D:\112-2 semester\AI_CUP_Baseline\AICUP_Baseline_BoT-SORT
+cd < AICUP_Baseline_BoT-SORT >
 
 pip install -r 'requirements.txt'
 ```
