@@ -50,7 +50,7 @@ pip install cython_bbox
 pip install faiss-cpu
 ```
 
-## Perpare ReID Dataset
+## Prepare ReID Dataset
 
 For training the ReID , detection patches must be generated as follows:
 
@@ -70,3 +70,21 @@ set FASTREID_DATASETS=fast_reid\datasets
 >```
 >set FASTREID_DATASETS=fast_reid\datasets
 >```
+
+## Prepare YOLOv7 Dataset
+run the `yolov7/tools/AICUP_to_YOLOv7.py` by the following command:
+
+```
+cd <BoT-SORT_dir>
+python yolov7/tools/AICUP_to_YOLOv7.py --AICUP_dir D:\Data\train --YOLOv7_dir D:\Data\yolo
+```
+## Model Zoo for COCO
+>[!TIP]
+> We recommand using YOLOv7 as the object detection model for tracking
+
+Download and store the trained models in 'pretrained' folder as follows:
+```
+<BoT-SORT_dir>/pretrained
+```
+
++ For multi-class MOT use [YOLOv7](https://github.com/WongKinYiu/yolov7) trained on COCO(or any custom weights)
