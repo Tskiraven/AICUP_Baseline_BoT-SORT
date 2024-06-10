@@ -65,17 +65,17 @@ set FASTREID_DATASETS=fast_reid\datasets
 >+ Since we previously changed the directory to `AICUP_Baseline_BoT-SORT`, 
 > the `FASTREID_DATASETS=fast_reid\datasets` should be set as a relative path.
 >+ In the [AICUP_Baseline_BoT-SORT](https://github.com/ricky-696/AICUP_Baseline_BoT-SORT)
-> use ```export FASTREID_DATASETS=fast_reid\datasets```, but Windows don't have '''export'''
+> use ```export FASTREID_DATASETS=fast_reid\datasets```, but Windows don't have 'export'
 >command, to translate linux style command scipt to windows/command batch style it would go like this:
->```
+>```shell
 >set FASTREID_DATASETS=fast_reid\datasets
 >```
 
 ## Prepare YOLOv7 Dataset
 run the `yolov7/tools/AICUP_to_YOLOv7.py` by the following command:
 
-```
-cd <BoT-SORT_dir>
+```shell
+cd <AICUP_Baseline_BoT-SORT>
 python yolov7/tools/AICUP_to_YOLOv7.py --AICUP_dir D:\Data\train --YOLOv7_dir D:\Data\yolo
 ```
 ## Model Zoo for COCO
@@ -83,8 +83,19 @@ python yolov7/tools/AICUP_to_YOLOv7.py --AICUP_dir D:\Data\train --YOLOv7_dir D:
 > We recommand using YOLOv7 as the object detection model for tracking
 
 Download and store the trained models in 'pretrained' folder as follows:
-```
+```shell
 <BoT-SORT_dir>/pretrained
 ```
 
 + For multi-class MOT use [YOLOv7](https://github.com/WongKinYiu/yolov7) trained on COCO(or any custom weights)
++ This project we download [**YOLOv7-E6E**](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6e.pt)
+
+## Training(Fine-tuning)
+
+**Train the ReID Module for AICUP**
+```shell
+cd <BoT-SORT_dir>
+
+# For training AICUP
+python fast_reid/tools/train_net.py --config-file fast_reid\configs\AICUP\bagtricks_R50-ibn.yml MODEL.DEVICE "cuda:0"
+```
