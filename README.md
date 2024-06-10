@@ -62,5 +62,7 @@ python fast_reid/datasets/generate_AICUP_patches.py --data_path D:\Data\train
 set FASTREID_DATASETS=fast_reid\datasets
 ```
 >[!TIP]
-> Since we previously changed the directory to `AICUP_Baseline_BoT-SORT`, 
+>+ Since we previously changed the directory to `AICUP_Baseline_BoT-SORT`, 
 > the `FASTREID_DATASETS=fast_reid\datasets` should be set as a relative path.
+>+ In the [AICUP_Baseline_BoT-SORT](https://github.com/ricky-696/AICUP_Baseline_BoT-SORT)
+> use set ```FASTREID_DATASETS=fast_reid\datasets```
