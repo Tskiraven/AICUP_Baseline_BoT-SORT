@@ -1,4 +1,4 @@
-# AICUP Baseline: BoT-SORT
+# AICUP Baseline: BoT-SORT ML_10
 The code is based on [AICUP_Baseline_BoT-SORT](https://github.com/ricky-696/AICUP_Baseline_BoT-SORT)
 
 ## Installation
@@ -26,6 +26,8 @@ pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --e
 
 **Step 5.** Install 'requirements.txt'
 ```shell
+<cd> D:\112-2 semester\AI_CUP_Baseline\AICUP_Baseline_BoT-SORT
+
 pip install -r 'requirements.txt'
 ```
 
