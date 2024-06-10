@@ -26,7 +26,7 @@ pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --e
 
 **Step 5.** Install 'requirements.txt'
 ```shell
-cd < AICUP_Baseline_BoT-SORT >
+cd <AICUP_Baseline_BoT-SORT>
 
 pip install -r 'requirements.txt'
 ```
@@ -49,3 +49,17 @@ pip install cython_bbox
 # faiss-cpu
 pip install faiss-cpu
 ```
+
+## Perpare ReID Dataset
+
+For training the ReID , detection patches must be generated as follows:
+
+```shell
+# For AICUP
+python fast_reid/datasets/generate_AICUP_patches.py --data_path D:\Data\train
+
+# remember link dataset to FastReID
+set FASTREID_DATASETS=fast_reid\datasets
+```
+>[!TIP]
+> Since we previously changed the directory to `AICUP_Baseline_BoT-SORT`, the `FASTREID_DATASETS=fast_reid\datasets` should be set as a relative path.
