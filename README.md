@@ -65,4 +65,7 @@ set FASTREID_DATASETS=fast_reid\datasets
 >+ Since we previously changed the directory to `AICUP_Baseline_BoT-SORT`, 
 > the `FASTREID_DATASETS=fast_reid\datasets` should be set as a relative path.
 >+ In the [AICUP_Baseline_BoT-SORT](https://github.com/ricky-696/AICUP_Baseline_BoT-SORT)
-> use set ```FASTREID_DATASETS=fast_reid\datasets```
+> use ```export FASTREID_DATASETS=fast_reid\datasets```, but Windows don't have 'export'
+>command, to translate linux style command scipt to windows/command batch style it would go like this:
+>```set FASTREID_DATASETS=fast_reid\datasets
+>```
