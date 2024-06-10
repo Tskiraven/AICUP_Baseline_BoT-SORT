@@ -18,3 +18,32 @@ The code is tested using torch 1.13.1+cu117 and torchvision=0.14.1+cu117
 ```shell
 pip install numpy
 ```
+
+**Step 4.**
+```shell
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
+```
+
+** Step 5.** Install 'requirements.txt'
+```shell
+pip install -r 'requirements.txt'
+```
+
+**Step 6.** Install cython
+```shell
+pip install cython
+```
+
+**Step 7.** Install [pycocotools](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/coco.py)
+```shell
+pip install pycocotools
+```
+
+**Step 8.** Install cython_bbox & faiss-cpu
+```shell
+# Cython-bbox
+pip install cython_bbox
+
+# faiss-cpu
+pip install faiss-cpu
+```
