@@ -67,5 +67,6 @@ set FASTREID_DATASETS=fast_reid\datasets
 >+ In the [AICUP_Baseline_BoT-SORT](https://github.com/ricky-696/AICUP_Baseline_BoT-SORT)
 > use ```export FASTREID_DATASETS=fast_reid\datasets```, but Windows don't have 'export'
 >command, to translate linux style command scipt to windows/command batch style it would go like this:
->```set FASTREID_DATASETS=fast_reid\datasets
+>```
+>set FASTREID_DATASETS=fast_reid\datasets
 >```
