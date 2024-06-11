@@ -109,8 +109,8 @@ python fast_reid/tools/train_net.py --config-file fast_reid\configs\AICUP\bagtri
 - Training hyperparameters are configured in [yolov7/data/hyp.scratch.custom.yaml](./yolov7/data/hyp.scratch.custom.yaml).
 
 > [!Warning]
-> **Due to hardware limitations, we are using yolov7-e6e.pt as the tracking model weights.**
-> **Therefore, this step will not be used in this project.**
+> **-Due to hardware limitations, we are using yolov7-e6e.pt as the tracking model weights.**
+> **-Therefore, this step will not be used in this project.**
 
 Single GPU finetuning for AICUP dataset
 ```shell
