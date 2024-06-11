@@ -12,7 +12,7 @@ conda create -n botsort python=3.7
 conda activate botsort
 ```
 **Step 2.** Install torch and match torchvision from [pytorch.org](https://pytorch.org/get-started/previous-versions/).<br>
-The code is tested using torch 1.13.1+cu117 and torchvision=0.14.1+cu117
+The code is tested using torch=1.13.1+cu117 and torchvision=0.14.1+cu117
 
 **Step 3.** **Install numpy first**
 ```shell
@@ -66,7 +66,7 @@ set FASTREID_DATASETS=fast_reid\datasets
 > the `FASTREID_DATASETS=fast_reid\datasets` should be set as a relative path.
 >+ In the [AICUP_Baseline_BoT-SORT](https://github.com/ricky-696/AICUP_Baseline_BoT-SORT)
 > use ```export FASTREID_DATASETS=fast_reid\datasets```, but Windows don't have 'export'
->command, to translate linux style command scipt to windows/command batch style it would go like this:
+>command, to translate linux style command script to windows/command batch style it would go like this:
 >```shell
 >set FASTREID_DATASETS=fast_reid\datasets
 >```
@@ -84,7 +84,7 @@ python yolov7/tools/AICUP_to_YOLOv7.py --AICUP_dir D:\Data\train --YOLOv7_dir D:
 
 Download and store the trained models in 'pretrained' folder as follows:
 ```shell
-<BoT-SORT_dir>/pretrained
+<AICUP_Baseline_BoT-SORT>/pretrained
 ```
 
 + For multi-class MOT use [YOLOv7](https://github.com/WongKinYiu/yolov7) trained on COCO(or any custom weights)
