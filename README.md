@@ -150,3 +150,9 @@ You can use `tools/evaluate.py` to evaluate your submission by the following com
 cd <AICUP_Baseline_BoT-SORT>
 python tools/evaluate.py --gt_dir D:\Data\MOT15 --ts_dir runs\pred_res
 ```
+
+Then you can get the result:
+![](demo_readme/windows.png)
+
+## Tracking and creating the submission file for AICUP (testdatasets) 
+
