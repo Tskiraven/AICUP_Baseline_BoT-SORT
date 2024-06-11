@@ -162,7 +162,7 @@ Using YOLOv7 with multi-class detection based on BoT-SORT (ReID) to detect and t
 cd <AICUP_Baseline_BoT-SORT>
 ```
 
-[Test Tracking](Test Tracking..txt)
+[Test_Tracking](./Test%20Tracking..txt)
 
 Final you can get the result of tracking vehecles:
 ![](demo_readme/public.png)
