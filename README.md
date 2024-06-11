@@ -154,5 +154,15 @@ python tools/evaluate.py --gt_dir D:\Data\MOT15 --ts_dir runs\pred_res
 Then you can get the result:
 ![](demo_readme/windows.png)
 
-## Tracking and creating the submission file for AICUP (testdatasets) 
+## Tracking and creating the submission file for AICUP (test_datasets) 
 
+Using YOLOv7 with multi-class detection based on BoT-SORT (ReID) to detect and track vehicles in `test_datasets`.
+
+```shell
+cd <AICUP_Baseline_BoT-SORT>
+```
+
+[Test Tracking](Test Tracking..txt)
+
+Final you can get the result of tracking vehecles:
+![](demo_readme/public.png)
