@@ -104,6 +104,7 @@ python fast_reid/tools/train_net.py --config-file fast_reid\configs\AICUP\bagtri
 
 ### Fine-tune YOLOv7 for AICUP ###
 
+參數檔設定參照連結
 - The dataset path is configured in [yolov7/data/AICUP.yaml](./yolov7/data/AICUP.yaml).
 - The model architecture can be configured in [yolov7/cfg/training/yolov7-AICUP.yaml](./yolov7/cfg/training/yolov7-AICUP.yaml).
 - Training hyperparameters are configured in [yolov7/data/hyp.scratch.custom.yaml](./yolov7/data/hyp.scratch.custom.yaml).
